@@ -1,0 +1,182 @@
+{
+  "basics": {
+    "name": "Gian Franco Marcano",
+    "label": "Full stack developer",
+    "image": "/me.webp",
+    "email": "gianf.marcano@gmail.com",
+    "phone": "(+58) 04120944822",
+    "url": "https://johndoe.com",
+    "summary": "Desarrollador Fullstack apasionado con 5 años de experiencia. Experto en C#, SQL Server, NodeJs, Python, Laravel, Vuejs y AWS. Licenciado en Informática (2020). Busco aportar mi sólida experiencia técnica y colaborar con un equipo innovador para crear soluciones impactantes.",
+    "location": {
+      "address": "Porlamar",
+      "postalCode": "6301",
+      "city": "Nueva Esparta",
+      "countryCode": "Ve",
+      "region": "Venezuela"
+    },
+    "profiles": [{
+      "network": "LinkedIn",
+      "username": "giannco",
+      "url": "https://www.linkedin.com/in/gian-franco-marcano-3b4798180"
+    },
+    {
+      "network": "GitHub",
+      "username": "giannco",
+      "url": "https://github.com/giannco"
+    }
+  ]
+  },
+  "work": [{
+    "name": "Intelligis Technologies",
+    "position": "Desarrollador fullstack",
+    "url": "https://company.com",
+    "startDate": "2019-03-01",
+    "endDate": "2024-04-30",
+    "summary": "Integrante en el equipo de desarrollo tecnológico, especializándome en C#, JavaScript y SQL Server. Contribución significativa al desarrollo de SmartMap, una innovadora plataforma web para la optimización de rutas de entrega y gestión logística de última milla. Facilité la captura eficiente de Pruebas de Entrega (POD) y la administración de transportistas tercerizados a través de SmartMap. Mejoré la experiencia del cliente proporcionando informes de progreso en tiempo real y herramientas de seguimiento avanzadas.",
+    "highlights": [
+      "Started the company"
+    ]
+  },
+  {
+    "name": "Nextwells Corporation",
+    "position": "Desarrollador fullstack",
+    "url": "https://company.com",
+    "startDate": "2018-03-01",
+    "endDate": "2019-02-28",
+    "summary": "Especialista Fullstack con dominio en Node.js y JavaScript, enfocado en soluciones para el sector energético. Colaboré en  el  desarrollo de LongView, una aplicación que marca tendencia en la optimización de procesos para la industria del petróleo y gas. Pionero en la mejora de la cadena de valor de servicios energéticos mediante la implementación de tecnologías avanzadas. Impulsor de la eficiencia operativa en el ámbito energético a través de la innovación con LongView. Responsable de la integración de Rollbase para el desarrollo de soluciones robustas y sostenibles. Contribuyente clave en la transformación digital del sector petrolero y gasífero, mejorando la prestación de servicios. Desarrollador de indicadores clave de rendimiento (KPIs) esenciales para la estrategia y toma de decisiones en operaciones energéticas.",
+    "highlights": [
+      "Started the company"
+    ]
+  },
+    {
+    "name": "CODEORSHOP,C.A",
+    "position": "Desarrollador fullstack",
+    "url": "https://company.com",
+    "startDate": "2019-03-01",
+    "endDate": "2024-04-30",
+    "summary": "Desarrollador en Pasify con Laravel y Vue. Innové en seguimiento para transporte chileno. Mejora en servicio a bordo. Transformé la experiencia de servicio al cliente",
+    "highlights": [
+      "Started the company"
+    ]
+  }],
+  "volunteer": [{
+    "organization": "Organization",
+    "position": "Volunteer",
+    "url": "https://organization.com/",
+    "startDate": "2012-01-01",
+    "endDate": "2013-01-01",
+    "summary": "Description…",
+    "highlights": [
+      "Awarded 'Volunteer of the Month'"
+    ]
+  }],
+  "education": [{
+    "institution": "Universidad de Oriente, Nucleo Nueva Esparta",
+    "url": "https://institution.com/",
+    "area": "Licenciatura en informática",
+    "studyType": "Licenciado en informática",
+    "startDate": "2010-04-01",
+    "endDate": "2020-02-01",
+    "score": "5.0",
+    "courses": [
+      "DB1101 - Basic SQL"
+    ]
+  }],
+  "awards": [{
+    "title": "Award",
+    "date": "2014-11-01",
+    "awarder": "Company",
+    "summary": "There is no spoon."
+  }],
+  "certificates": [{
+    "name": "Certificate",
+    "date": "2021-11-07",
+    "issuer": "Company",
+    "url": "https://certificate.com"
+  }],
+  "publications": [{
+    "name": "Publication",
+    "publisher": "Company",
+    "releaseDate": "2014-10-01",
+    "url": "https://publication.com",
+    "summary": "Description…"
+  }],
+  "skills": [{
+    "name": "NodeJs",
+    "level": "Master",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  },
+  {
+    "name": "Vue",
+    "level": "Master",
+    "keywords": []
+  },
+  {
+    "name": "Python",
+    "level": "Master",
+    "keywords": []
+  },
+  {
+    "name": "Django",
+    "level": "Master",
+    "keywords": []
+  },
+  {
+    "name": "PHP",
+    "level": "Master",
+    "keywords": []
+  },
+  {
+    "name": "Laravel",
+    "level": "Master",
+    "keywords": []
+  },
+  {
+    "name": "C#",
+    "level": "Master",
+    "keywords": []
+  },
+  {
+    "name": "SQL Server",
+    "level": "Master",
+    "keywords": []
+  },
+  {
+    "name": "AWS",
+    "level": "Master",
+    "keywords": []
+  }
+],
+  "languages": [{
+    "language": "Spanish",
+    "fluency": "Native speaker"
+  },{
+    "language": "English",
+    "fluency": "A2"
+  }],
+  "interests": [{
+    "name": "Wildlife",
+    "keywords": [
+      "Ferrets",
+      "Unicorns"
+    ]
+  }],
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference…"
+  }],
+  "projects": [{
+    "name": "Project",
+    "startDate": "2019-01-01",
+    "endDate": "2021-01-01",
+    "description": "Description...",
+    "highlights": [
+      "Won award at AIHacks 2016"
+    ],
+    "url": "https://project.com/"
+  }]
+}
