@@ -29,7 +29,7 @@
   "work": [{
     "name": "Intelligis Technologies",
     "position": "Desarrollador fullstack",
-    "url": "https://company.com",
+    "url": "https://intelligisgroup.com/",
     "startDate": "2019-03-01",
     "endDate": "2024-04-30",
     "summary": "Integrante en el equipo de desarrollo tecnológico, especializándome en C#, JavaScript y SQL Server. Contribución significativa al desarrollo de SmartMap, una innovadora plataforma web para la optimización de rutas de entrega y gestión logística de última milla. Facilité la captura eficiente de Pruebas de Entrega (POD) y la administración de transportistas tercerizados a través de SmartMap. Mejoré la experiencia del cliente proporcionando informes de progreso en tiempo real y herramientas de seguimiento avanzadas.",
@@ -40,7 +40,7 @@
   {
     "name": "Nextwells Corporation",
     "position": "Desarrollador fullstack",
-    "url": "https://company.com",
+    "url": "https://nextwells.com/",
     "startDate": "2018-03-01",
     "endDate": "2019-02-28",
     "summary": "Especialista Fullstack con dominio en Node.js y JavaScript, enfocado en soluciones para el sector energético. Colaboré en  el  desarrollo de LongView, una aplicación que marca tendencia en la optimización de procesos para la industria del petróleo y gas. Pionero en la mejora de la cadena de valor de servicios energéticos mediante la implementación de tecnologías avanzadas. Impulsor de la eficiencia operativa en el ámbito energético a través de la innovación con LongView. Responsable de la integración de Rollbase para el desarrollo de soluciones robustas y sostenibles. Contribuyente clave en la transformación digital del sector petrolero y gasífero, mejorando la prestación de servicios. Desarrollador de indicadores clave de rendimiento (KPIs) esenciales para la estrategia y toma de decisiones en operaciones energéticas.",
@@ -51,10 +51,10 @@
     {
     "name": "CODEORSHOP,C.A",
     "position": "Desarrollador fullstack",
-    "url": "https://company.com",
-    "startDate": "2019-03-01",
-    "endDate": "2024-04-30",
-    "summary": "Desarrollador en Pasify con Laravel y Vue. Innové en seguimiento para transporte chileno. Mejora en servicio a bordo. Transformé la experiencia de servicio al cliente",
+    "url": "#",
+    "startDate": "2017-06-01",
+    "endDate": "2018-02-01",
+    "summary": "Desarrollador en Pasify con Laravel y Vue. Innové en seguimiento para transporte chileno. Mejora en servicio a bordo. Transformé la experiencia de servicio al cliente.",
     "highlights": [
       "Started the company"
     ]

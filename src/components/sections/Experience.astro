@@ -1,64 +1,68 @@
 ---
 import {work} from '@cv'
-import  Section from  '@/components/Section.astro'
-
+import Section from '@/components/Section.astro'
 ---
-
 <Section title="Experiencia">
-	<ul>
-		{
-			work.map(({ name, startDate, endDate, position, summary}) => {
-				const startYear = new  Date(startDate).getFullYear()
-				const endYear =  endDate != null ? new Date(endDate).getFullYear() : "Present"
-				const years = `${startYear} - ${endYear}`
+    <ul>
+        {
+        work.map(({ name, startDate, endDate, position, summary, url}) => {
+        const startYear = new Date(startDate).getFullYear()
+        const endYear = endDate != null ? new Date(endDate).getFullYear() : "Present"
+        const startMonth = new Date(startDate).toLocaleString('es-ES', { month: 'long' })
+        const endMonth = new Date(endDate).toLocaleString('es-ES', { month: 'long' })
+        const firstThreeLetters = startMonth.substring(0, 3)
+        const startMonthFommatter = firstThreeLetters.charAt(0).toUpperCase() + firstThreeLetters.slice(1)
+        const firstThreeLettersEnd = endMonth.substring(0, 3)
+        const endMonthFommatter = firstThreeLettersEnd.charAt(0).toUpperCase() + firstThreeLettersEnd.slice(1)
+        const years = `${startMonthFommatter} ${startYear} - ${endMonthFommatter} ${endYear}`
+        return (
+        <li>
+            <article>
+                <header>
+                    <div>
+                        <h3><a href={url} target="_blank">{name}</a></h3>
+                        <h4>{position}</h3>
+                    </div>
+                    <time>{years}</time>
+                </header>
+                <footer>
+                    <p>{summary}</p>
+                </footer>
+            </article>
+        </li>
+        )
+        })
+        }
+    </ul>
+    <Section />
+    <style>
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
 
-				return (
-				<li>
-					<article>
-						<header>
-							<div>
-								<h3>{name}</h3>
-								<h4>{position}</h3>
-							</div>
-							<time>{years}</time>
-						</header>
-						<footer>
-							<p>{summary}</p>
-						</footer>
-					</article>
-				</li>
-				)
-			})
-		}
-	</ul>
-<Section/>
+    article h3 a {
+        font-weight: 500;
+        color: #111;
+        color: 'inherit';
+        text-decoration: 'none';
+    }
 
-<style>
-	ul{
-		display: flex;
-		flex-direction: column;
-		gap: 32px;
-	}
+    article h4 {
+        color: #222;
+        font-weight: 400;
+    }
 
-	article h3{
-		font-weight: 500;
-		color: #111;
-	}
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 4px;
+    }
 
-	article h4{
-		color: #222;
-		font-weight: 400;
-	}
-
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		margin-bottom: 4px;
-	}
-
-	time {
-		color: #555;
-		font-size: 0.85rem;
-	}
-</style>
+    time {
+        color: #555;
+        font-size: 0.85rem;
+    }
+    </style>
