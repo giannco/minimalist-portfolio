@@ -6,7 +6,7 @@
     "email": "gianf.marcano@gmail.com",
     "phone": "(+58) 04120944822",
     "url": "https://johndoe.com",
-    "summary": "Desarrollador Fullstack apasionado con 5 años de experiencia. Experto en C#, SQL Server, NodeJs, Python, Laravel, Vuejs y AWS. Licenciado en Informática (2020). Busco aportar mi sólida experiencia técnica y colaborar con un equipo innovador para crear soluciones impactantes.",
+    "summary": "Passionate Full Stack Developer with 5 years of experience. Proficient in C#, SQL Server, Node.js, Python, Laravel, Vue.js, and AWS. Holds a Bachelor’s degree in Computer Science (2020). Seeking to leverage my strong technical background and collaborate with an innovative team to create impactful solutions.",
     "location": {
       "address": "Porlamar",
       "postalCode": "6301",
@@ -32,7 +32,7 @@
     "url": "https://intelligisgroup.com/",
     "startDate": "2019-03-01",
     "endDate": "2024-04-30",
-    "summary": "Integrante en el equipo de desarrollo tecnológico, especializándome en C#, JavaScript y SQL Server. Contribución significativa al desarrollo de SmartMap, una innovadora plataforma web para la optimización de rutas de entrega y gestión logística de última milla. Facilité la captura eficiente de Pruebas de Entrega (POD) y la administración de transportistas tercerizados a través de SmartMap. Mejoré la experiencia del cliente proporcionando informes de progreso en tiempo real y herramientas de seguimiento avanzadas.",
+    "summary": "Integral part of the technology development team, specializing in C#, JavaScript, and SQL Server. Significantly contributed to the development of SmartMap, an innovative web platform for optimizing delivery routes and last-mile logistics management. Enhanced customer experience by providing real-time progress reports and advanced tracking tools.",
     "highlights": [
       "Started the company"
     ]
@@ -43,7 +43,7 @@
     "url": "https://nextwells.com/",
     "startDate": "2018-03-01",
     "endDate": "2019-02-28",
-    "summary": "Especialista Fullstack con dominio en Node.js y JavaScript, enfocado en soluciones para el sector energético. Colaboré en  el  desarrollo de LongView, una aplicación que marca tendencia en la optimización de procesos para la industria del petróleo y gas. Pionero en la mejora de la cadena de valor de servicios energéticos mediante la implementación de tecnologías avanzadas. Impulsor de la eficiencia operativa en el ámbito energético a través de la innovación con LongView. Responsable de la integración de Rollbase para el desarrollo de soluciones robustas y sostenibles. Contribuyente clave en la transformación digital del sector petrolero y gasífero, mejorando la prestación de servicios. Desarrollador de indicadores clave de rendimiento (KPIs) esenciales para la estrategia y toma de decisiones en operaciones energéticas.",
+    "summary": "Specialized Full Stack Developer with expertise in Node.js and JavaScript, focused on solutions for the energy sector. Collaborated on LongView, a trendsetting application for process optimization in the oil and gas industry. Pioneered efficiency improvements through advanced technologies, contributing to the digital transformation of the energy sector. Developed essential Key Performance Indicators (KPIs) for strategic decision-making in energy operations.",
     "highlights": [
       "Started the company"
     ]
@@ -54,7 +54,7 @@
     "url": "#",
     "startDate": "2017-06-01",
     "endDate": "2018-02-01",
-    "summary": "Desarrollador en Pasify con Laravel y Vue. Innové en seguimiento para transporte chileno. Mejora en servicio a bordo. Transformé la experiencia de servicio al cliente.",
+    "summary": "Developed with Laravel and Vue.js for Pasify, innovating Chilean transportation tracking and onboard services. Transformed the customer service experience.",
     "highlights": [
       "Started the company"
     ]
@@ -74,7 +74,7 @@
     "institution": "Universidad de Oriente, Nucleo Nueva Esparta",
     "url": "https://institution.com/",
     "area": "Licenciatura en informática",
-    "studyType": "Licenciado en informática",
+    "studyType": "Bachelor's degree in Computer Science",
     "startDate": "2010-03-01",
     "endDate": "2020-02-01",
     "score": "5.0",

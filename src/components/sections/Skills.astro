@@ -1,33 +1,78 @@
 ---
-import {skills} from '@cv'
+interface Props {
+    lang: string,
+    title:  string;
+}
+const { title, lang } = Astro.props;
+
+import HTML from "@/icons/html.astro"
+import Node from "@/icons/node.astro"
+import AWS from "@/icons/AWS.astro"
+import SQLServer from "@/icons/SQLServer.astro"
+import CSharp from "@/icons/CSharp.astro"
+import Laravel from "@/icons/Laravel.astro"
+import PHP from "@/icons/php.astro"
+import Django from "@/icons/Django.astro"
+import Python from "@/icons/Python.astro"
+import Vue from "@/icons/Vue.astro"
+
+import { getData } from '@cv';
 import  Section from  '@/components/Section.astro'
 
+const { skills } = getData(lang);
+
+const SKILLS_ICONS: Record<string, any> = {
+  HTML,
+  Node,
+  AWS,
+  SQLServer,
+  CSharp,
+  Laravel,
+  PHP,
+  Django,
+  Python,
+  Vue,
+}
 ---
 
-<Section title="Habilidades">
-	<ul>
-		{
-			skills.map(({ name }) => (	
-				<li>
-					<span>{name}</span>
-				</li>
-			))
-		}
-	</ul>
+<Section title={title}>
+  <ul>
+    {
+      skills.map(({ name }) => {
+        const iconName = name
+        const Icon = SKILLS_ICONS[iconName]
+
+        return (
+          <li>
+			{Icon && <Icon />} 
+			<span>
+			  {name === "SQLServer" && "SQL Server" ||
+			   name === "CSharp" && "C#" ||
+			   name}
+			</span>
+          </li>
+        )
+      })
+    }
+  </ul>
 <Section/>
 <style>
-	ul{
-		display: inline-flex;
-		gap: 8px;
-		flex-wrap: wrap;
-	}
 
-	li{
-		border-radius: 6px;
-		background: #eee;
-		color: black;
-		font-size: .8rem;
-		font-weight: 500;
-		padding: 0.2rem 0.6rem;
-	}
+  ul {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    align-items: center;
+    background: #b8daba;
+    border-radius: 6px;
+    color: black;
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: 500;
+    gap: 4px;
+    padding: 0.2rem 0.6rem;
+  }
 <style>

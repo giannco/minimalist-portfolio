@@ -1,0 +1,145 @@
+---
+interface Props {
+	lang: string,
+	title: string,
+	msgEmail: string,
+	msgPhone: string, 
+	msgGeneric: string;
+}
+
+const { title, msgEmail, msgPhone, msgGeneric, lang } = Astro.props;
+
+import { getData } from '@cv';
+import  Section from  '@/components/Section.astro'
+import  Mail from  '@/icons/Mail.astro'
+import  Phone from  '@/icons/Phone.astro'
+import  GitHub from  '@/icons/GitHub.astro'
+import  LinkedIn from  '@/icons/LinkedIn.astro'
+import  X from  '@/icons/X.astro'
+
+const { basics } = getData(lang);
+const { name, profiles, phone, email }  = basics
+const SOCIAL_ICONS: Record<string, any> = {
+	GitHub,
+	LinkedIn,
+	X
+}
+
+---
+
+<Section title={title}>
+	<div  class="container">
+		<div class="info">
+			<footer>
+				{
+					email && (
+						<a
+							href={`mailto:${email}`} 
+							title={`${msgEmail} ${name}`}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+						<Mail/>
+						<span class="hide-on-small">{email}</span>
+						</a>
+					)
+				}
+				{
+					phone && (
+						<a
+							href=#
+							title={`${msgPhone} ${name}`}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+						<Phone/>
+						<span class="hide-on-small">{phone}</span>
+						</a>
+					)
+				}
+				{
+					profiles.map(({ network, url, username}) => {
+
+						const Icon = SOCIAL_ICONS[network]
+
+						return (
+						<a
+							href={url} 
+							title={`${msgGeneric} ${username} ${network}`}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+						<Icon/>
+						<span class="hide-on-small">{url}</span>
+						</a>
+						)
+					})
+				}
+			</footer>
+		</div>
+	</div>
+</Section>
+
+<style>
+	.container{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
+	.info{
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
+		padding-right: 3px;
+
+	}
+
+	img{
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		width: 100px;
+		border-radius: 16px;
+
+	}
+	span{
+		color: #666;
+		display: flex;
+		align-items: center;
+		gap: .25rem;
+		font-size: .85rem;
+		letter-spacing: -0.05rem;
+	}
+
+	footer{
+		display: flex;
+		gap:8px;
+		margin-top: 8px;
+		flex-direction: column;
+	}
+
+	footer a{
+		text-decoration: none;
+		color: #666666;
+		display: flex;
+    	align-items: center;
+    	gap: .50rem;
+	}
+
+	footer a:hover{
+		background: #eee;
+	}
+
+	@media (max-width: 500px) {
+		
+		.hide-on-small {
+			display: none;
+    	}
+    	
+    	footer{
+    		flex-direction: row;
+		}
+  	}
+</style>

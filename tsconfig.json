@@ -4,10 +4,9 @@
     "baseUrl":".",
     "paths":{
       "@cv":[
-        "./resume.json"
+        "./index.ts"
       ],
       "@/*":["src/*"]
     }
-
   }
 }

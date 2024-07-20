@@ -1,36 +1,48 @@
 ---
-import {work} from '@cv'
+interface Props {
+    lang: string,
+    title: string;
+}
+
+const { title, lang } = Astro.props;
+
+import { getData } from '@cv';
 import Section from '@/components/Section.astro'
+import moment from 'moment';
+
+const { work } = getData(lang);
 ---
-<Section title="Experiencia">
+<Section title={title}>
     <ul>
         {
         work.map(({ name, startDate, endDate, position, summary, url}) => {
-        const startYear = new Date(startDate).getFullYear()
-        const endYear = endDate != null ? new Date(endDate).getFullYear() : "Present"
-        const startMonth = new Date(startDate).toLocaleString('es-ES', { month: 'long' })
-        const endMonth = new Date(endDate).toLocaleString('es-ES', { month: 'long' })
-        const firstThreeLetters = startMonth.substring(0, 3)
-        const startMonthFommatter = firstThreeLetters.charAt(0).toUpperCase() + firstThreeLetters.slice(1)
-        const firstThreeLettersEnd = endMonth.substring(0, 3)
-        const endMonthFommatter = firstThreeLettersEnd.charAt(0).toUpperCase() + firstThreeLettersEnd.slice(1)
-        const years = `${startMonthFommatter} ${startYear} - ${endMonthFommatter} ${endYear}`
-        return (
-        <li>
-            <article>
-                <header>
-                    <div>
-                        <h3><a href={url} target="_blank">{name}</a></h3>
-                        <h4>{position}</h3>
-                    </div>
-                    <time>{years}</time>
-                </header>
-                <footer>
-                    <p>{summary}</p>
-                </footer>
-            </article>
-        </li>
-        )
+            const startDateMoment = moment(startDate)
+            const endDateMoment = endDate ? moment(endDate) : moment()
+            const startYear = startDateMoment.year();
+            const endYear = endDateMoment.year() || 'Present';
+            const startMonth = startDateMoment.format('MMMM');
+            const endMonth = endDateMoment.format('MMMM');
+            const firstThreeLetters = startMonth.substring(0, 3)
+            const startMonthFommatter = firstThreeLetters.charAt(0).toUpperCase() + firstThreeLetters.slice(1)
+            const firstThreeLettersEnd = endMonth.substring(0, 3)
+            const endMonthFommatter = firstThreeLettersEnd.charAt(0).toUpperCase() + firstThreeLettersEnd.slice(1)
+            const years = `${startMonthFommatter} ${startYear} - ${endMonthFommatter} ${endYear}`
+            return (
+            <li>
+                <article>
+                    <header>
+                        <div>
+                            <h3><a href={url} target="_blank">{name}</a></h3>
+                            <h4>{position}</h4>
+                        </div>
+                        <time>{years}</time>
+                    </header>
+                    <footer>
+                        <p>{summary}</p>
+                    </footer>
+                </article>
+            </li>
+            )
         })
         }
     </ul>
@@ -64,5 +76,10 @@ import Section from '@/components/Section.astro'
     time {
         color: #555;
         font-size: 0.85rem;
+    }
+
+    header div h3 a:hover {
+        background: #ddd;
+
     }
     </style>

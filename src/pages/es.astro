@@ -1,0 +1,38 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import About from '@/components/sections/About.astro'
+import Header from '@/components/sections/Header.astro'
+import Contact from '@/components/sections/Contact.astro'
+import Education from '@/components/sections/Education.astro'
+import Experience from '@/components/sections/Experience.astro'
+import Hero from '@/components/sections/Hero.astro'
+import Skills from '@/components/sections/Skills.astro'
+
+import { getData } from '@cv';
+
+let lang = 'es';
+
+let { basics } = getData(lang);
+
+let { name, label } = basics;
+
+---
+<Layout title={`${name} ${label}`}>
+  <main>
+    <Header active='es'/>
+    <Hero  transition:persist lang={lang}/>
+    <Contact  lang={lang} title="Contacto" msgEmail = "Enivar correo a" msgPhone = "Llamar a" msgGeneric="Visitar perfil de"/>
+    <About lang={lang} title="Sobre mí"/>
+    <Experience lang={lang} title="Experiencia"/>
+    <Education lang={lang} title="Educación"/>
+    <Skills  lang={lang} title="Habilidades"/>
+  </main>
+</Layout>
+
+<style>
+  main{
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+  }
+</style>

@@ -1,0 +1,68 @@
+---
+interface Props {
+	active: string;
+}
+
+const { active } = Astro.props;
+import  Section from  '@/components/Section.astro'
+
+---
+
+<Section >
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="/es" lang="es" class={active == 'es' ? 'active' : ''}>
+            Español
+          </a>
+        </li>
+        <li>
+          <a href="/en" lang="en" class={active == 'en' ? 'active' : ''}>
+            English
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</Section>
+
+<style>
+  header {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 150px; /* reducimos el ancho del header */
+    margin: 20px auto;
+    border-radius: 30px; /* reducimos el radio de los bordes */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* reducimos la sombra */
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    margin: 0 5px; /* reducimos el margen lateral */
+    font-size: 14px; /* reducimos el tamaño de la fuente */
+  }
+
+  nav a:hover {
+    color: #666;
+  }
+
+  nav a.active {
+    color: #35682d; /* cambiamos el color a amarillo */
+    font-weight: bold;
+  }
+
+ 
+</style>

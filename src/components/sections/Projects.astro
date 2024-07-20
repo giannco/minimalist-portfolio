@@ -1,10 +1,19 @@
 ---
-import {projects} from '@cv'
+interface Props {
+    lang: string,
+    title: string;
+}
+
+const { title, lang } = Astro.props;
+
+import { getData } from '@cv';
 import  Section from  '@/components/Section.astro'
+
+const { projects } = getData(lang);
 
 ---
 
-<Section title="Proyectos">
+<Section title={title}>
 	<ul>
 		{
 			projects.map(({ url, description, highlights, name}) => {

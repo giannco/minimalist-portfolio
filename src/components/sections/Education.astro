@@ -1,16 +1,35 @@
 ---
-import {education} from '@cv'
-import  Section from  '@/components/Section.astro'
+interface Props {
+    lang: string,
+    title: string;
+}
 
+const { title, lang } = Astro.props;
+
+import { getData } from '@cv';
+import  Section from  '@/components/Section.astro'
+import moment from 'moment';
+
+const { education } = getData(lang);
 ---
 
-<Section title="Educación">
+<Section title={title}>
+
 	<ul>
 		{
 			education.map(({ institution, startDate, endDate, studyType}) => {
-				const startYear = new  Date(startDate).getFullYear()
-				const endYear =  endDate != null ? new Date(endDate).getFullYear() : "Present"
-				const years = `${startYear} - ${endYear}`
+				const startDateMoment = moment(startDate)
+				const endDateMoment = endDate ? moment(endDate) : moment()
+			
+				const startYear = startDateMoment.year();
+				const endYear = endDateMoment.year() || 'Present';
+				const startMonth = startDateMoment.format('MMMM');
+				const endMonth = endDateMoment.format('MMMM');
+		        const firstThreeLetters = startMonth.substring(0, 3)
+		        const startMonthFommatter = firstThreeLetters.charAt(0).toUpperCase() + firstThreeLetters.slice(1)
+		        const firstThreeLettersEnd = endMonth.substring(0, 3)
+		        const endMonthFommatter = firstThreeLettersEnd.charAt(0).toUpperCase() + firstThreeLettersEnd.slice(1)
+		        const years = `${startMonthFommatter} ${startYear} - ${endMonthFommatter} ${endYear}`
 
 				return (
 				<li>
@@ -39,11 +58,11 @@ import  Section from  '@/components/Section.astro'
 
 	article h3{
 		font-weight: 500;
-		color: #111;
+		color: #555;
 	}
 
 	article h4{
-		color: #222;
+		color: #666;
 		font-weight: 400;
 	}
 
