@@ -75,11 +75,18 @@ const { work } = getData(lang);
 
     time {
         color: #555;
-        font-size: 0.85rem;
+        gap: 32px;
     }
 
     header div h3 a:hover {
-        background: #ddd;
+        color: #35682d; /* cambiamos el color a amarillo */
+        font-weight: bold;
 
+    }
+
+    @media (max-width: 500px) {
+        time {
+            width: 100px;
+        }
     }
     </style>
