@@ -7,18 +7,17 @@ interface Props {
 	msgGeneric: string;
 }
 
-const { title, msgEmail, msgPhone, msgGeneric, lang } = Astro.props;
+const { title, msgEmail, msgGeneric, lang } = Astro.props;
 
 import { getData } from '@cv';
 import  Section from  '@/components/Section.astro'
 import  Mail from  '@/icons/Mail.astro'
-import  Phone from  '@/icons/Phone.astro'
 import  GitHub from  '@/icons/GitHub.astro'
 import  LinkedIn from  '@/icons/LinkedIn.astro'
 import  X from  '@/icons/X.astro'
 
 const { basics } = getData(lang);
-const { name, profiles, phone, email }  = basics
+const { name, profiles, email }  = basics
 const SOCIAL_ICONS: Record<string, any> = {
 	GitHub,
 	LinkedIn,
@@ -41,19 +40,6 @@ const SOCIAL_ICONS: Record<string, any> = {
 						>
 						<Mail/>
 						<span class="hide-on-small">{email}</span>
-						</a>
-					)
-				}
-				{
-					phone && (
-						<a
-							href=#
-							title={`${msgPhone} ${name}`}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-						<Phone/>
-						<span class="hide-on-small">{phone}</span>
 						</a>
 					)
 				}
