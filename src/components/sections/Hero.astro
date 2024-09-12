@@ -1,9 +1,10 @@
 ---
 interface Props {
+	id:  string,
 	lang: string;
 }
 
-const { lang } = Astro.props;
+const { lang, id } = Astro.props;
 import { getData } from '@cv';
 import  Section from  '@/components/Section.astro'
 import  WorldMap from  '@/icons/WorldMap.astro'
@@ -15,7 +16,7 @@ const { city, region } = location
 
 ---
 
-<Section >
+<Section id={id}>
 	<div class="container">
 		<div class="info">
 			<h1>{name}</h1>

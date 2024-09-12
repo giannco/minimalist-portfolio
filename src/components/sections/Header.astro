@@ -1,6 +1,6 @@
 ---
 interface Props {
-  itemsArray:[]
+  itemsArray: { text: string; href: string; }[];
 }
 
 const { itemsArray } = Astro.props;
@@ -37,21 +37,26 @@ const { itemsArray } = Astro.props;
     const $linea1 = document.querySelector("#linea1");
     const $linea2 = document.querySelector("#linea2");
     const $linea3 = document.querySelector("#linea3");
-    $btnmenu.addEventListener("click", () => {
-      $linea1.classList.toggle("activelinea1__bars-menu");
-      $linea2.classList.toggle("activelinea2__bars-menu");
-      $linea3.classList.toggle("activelinea3__bars-menu");
-      $menu.classList.toggle("menu-activado");
-      $menuDrop.classList.toggle("activa-menu-drop");
+
+    if ($menu && $menuDrop && $btnmenu && $linea1 && $linea2 &&  $linea3){
+        $btnmenu.addEventListener("click", () => {
+        $linea1.classList.toggle("activelinea1__bars-menu");
+        $linea2.classList.toggle("activelinea2__bars-menu");
+        $linea3.classList.toggle("activelinea3__bars-menu");
+        $menu.classList.toggle("menu-activado");
+        $menuDrop.classList.toggle("activa-menu-drop");
     });
 
-    $menuDrop.addEventListener("click", () => {
-      $linea1.classList.toggle("activelinea1__bars-menu");
-      $linea2.classList.toggle("activelinea2__bars-menu");
-      $linea3.classList.toggle("activelinea3__bars-menu");
-      $menu.classList.toggle("menu-activado");
-      $menuDrop.classList.toggle("activa-menu-drop");
-    });
+      $menuDrop.addEventListener("click", () => {
+        $linea1.classList.toggle("activelinea1__bars-menu");
+        $linea2.classList.toggle("activelinea2__bars-menu");
+        $linea3.classList.toggle("activelinea3__bars-menu");
+        $menu.classList.toggle("menu-activado");
+        $menuDrop.classList.toggle("activa-menu-drop");
+      });
+    }
+
+
   </script>
 </header>
 
