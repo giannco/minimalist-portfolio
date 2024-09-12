@@ -1,13 +1,14 @@
 ---
 interface Props {
 	lang: string,
+	id: string,
 	title: string,
 	msgEmail: string,
 	msgPhone: string, 
 	msgGeneric: string;
 }
 
-const { title, msgEmail, msgGeneric, lang } = Astro.props;
+const { title, msgEmail, msgGeneric, lang,  id } = Astro.props;
 
 import { getData } from '@cv';
 import  Section from  '@/components/Section.astro'
@@ -26,7 +27,7 @@ const SOCIAL_ICONS: Record<string, any> = {
 
 ---
 
-<Section title={title}>
+<Section title={title} id={id}>
 	<div  class="container">
 		<div class="info">
 			<footer>

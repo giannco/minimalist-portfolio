@@ -170,13 +170,24 @@
     "reference": "Reference…"
   }],
   "projects": [{
-    "name": "Project",
+    "name": "stockmaster",
+    "startDate": "2024-08-01",
+    "endDate": "2024-09-10",
+    "description": "Sistema de gestión de inventario completo y sofisticado basado en Django y Metronic, que ofrece una variedad de funcionalidades para optimizar la gestión del negocio y mejorar la rentabilidad, incluyendo control de inventario, alertas de rotación, integración con API, reportes, facturación, gestión de usuarios y proveedores, y características adicionales como una interfaz de usuario moderna y medidas de seguridad para proteger la información del inventario y las operaciones financieras. Funciona tambien como una PWA, es adaptable a cualquier dispositivo.",
+    "highlights": [
+      "Django", "Metronic", "CSS", "Html", "JavaScript", "ORM", "MySQL"
+    ],
+    "image":"/stockmaster.png",
+    "url": "#"
+  },{
+    "name": "Chessboard with Knight's Tour",
     "startDate": "2019-01-01",
     "endDate": "2021-01-01",
-    "description": "Description...",
+    "description": "Un tablero de ajedrez interactivo con una pieza de caballo que se mueve aleatoriamente por el tablero, lo que demuestra el problema del Tour del Caballo.",
     "highlights": [
-      "Won award at AIHacks 2016"
+      "Html", "JavaScript", "CSS"
     ],
-    "url": "https://project.com/"
+    "image":"/chessboard.png",
+    "url": "https://github.com/giannco/Chessboard"
   }]
 }

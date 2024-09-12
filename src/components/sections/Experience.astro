@@ -1,10 +1,11 @@
 ---
 interface Props {
     lang: string,
+    id: string,
     title: string;
 }
 
-const { title, lang } = Astro.props;
+const { title, lang, id } = Astro.props;
 
 import { getData } from '@cv';
 import Section from '@/components/Section.astro'
@@ -12,12 +13,12 @@ import moment from 'moment';
 
 const { work } = getData(lang);
 ---
-<Section title={title}>
+<Section title={title} id={id}>
     <ul>
         {
         work.map(({ name, startDate, endDate, position, summary, url}) => {
             const startDateMoment = moment(startDate)
-            const endDateMoment = endDate ? moment(endDate) : moment()
+            const endDateMoment = endDate? moment(endDate) : moment()
             const startYear = startDateMoment.year();
             const endYear = endDateMoment.year() || 'Present';
             const startMonth = startDateMoment.format('MMMM');
@@ -32,14 +33,17 @@ const { work } = getData(lang);
                 <article>
                     <header>
                         <div>
-                            <h3><a href={url} target="_blank">{name}</a></h3>
-                            <h4>{position}</h4>
+                            <h3>
+                                <span></span>
+                                <a href={url} target="_blank">{name}</a>
+                            </h3>
+                            <div class="info" style="">
+                                <h4>{position}</h4>
+                                <time>{years}</time>
+                                <p>{summary}</p>
+                            </div>
                         </div>
-                        <time>{years}</time>
                     </header>
-                    <footer>
-                        <p>{summary}</p>
-                    </footer>
                 </article>
             </li>
             )
@@ -47,11 +51,17 @@ const { work } = getData(lang);
         }
     </ul>
     <Section />
-    <style>
+<style>
     ul {
         display: flex;
         flex-direction: column;
         gap: 32px;
+        position: relative; /* Add this line to create a containing block for the lines */
+    }
+
+    article h3 {
+        display: flex;
+        align-items: center;
     }
 
     article h3 a {
@@ -59,24 +69,57 @@ const { work } = getData(lang);
         color: #111;
         color: 'inherit';
         text-decoration: 'none';
+        /*margin-left: 10px;*/
+    }
+
+  .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /*margin-left: 20px;*/
+        margin-top:5px;
+        
     }
 
     article h4 {
         color: #222;
         font-weight: 400;
-    }
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 4px;
+        margin-bottom: 5px;
     }
 
     time {
         color: #555;
-        gap: 32px;
+        font-size: 14px;
+        margin-bottom: 10px;
     }
+
+   .info p {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .circle {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #5e8657;
+        border-bottom: 2px solid #5e8657;
+        position: relative; /* Add this line */
+    }
+
+    
+   /*ul::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 4.50px; /* Adjust the left position to match the circle's position */
+      width: 0.5px;
+      height: 100%;
+      background-color: #5e8657;
+      border-left: 0.1px dashed #5e8657; /* Add this line to create a dotted border */
+      background-color: transparent; /* Remove the background color to show the dotted border */
+    }*/
 
     header div h3 a:hover {
         color: #35682d; /* cambiamos el color a amarillo */
@@ -89,4 +132,4 @@ const { work } = getData(lang);
             width: 100px;
         }
     }
-    </style>
+</style>

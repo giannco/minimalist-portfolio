@@ -7,6 +7,7 @@ import Education from '@/components/sections/Education.astro'
 import Experience from '@/components/sections/Experience.astro'
 import Hero from '@/components/sections/Hero.astro'
 import Skills from '@/components/sections/Skills.astro'
+import Projects from '@/components/sections/Projects.astro'
 
 import { getData } from '@cv';
 
@@ -16,16 +17,36 @@ let { basics } = getData(lang);
 
 let { name, label } = basics;
 
+const itemsArray = [
+
+    { text: "Inicio", href: "#hero" },
+
+    { text: "Proyectos", href: "#projects" },
+
+    { text: "Habilidades", href: "#skills" },
+
+    { text: "Educación", href: "#education" },
+
+    { text: "Sobre mi", href: "#about" },
+
+    { text: "Contacto", href: "#contact" },
+
+    { text: "Ingles", href: "/en" }
+
+  ];
+
+
 ---
 <Layout title={`${name} ${label}`}>
+  <Header active='es' itemsArray={itemsArray}/>
   <main>
-    <Header active='es'/>
-    <Hero  transition:persist lang={lang}/>
-    <Contact  lang={lang} title="Contacto" msgEmail = "Enivar correo a" msgPhone = "Llamar a" msgGeneric="Visitar perfil de"/>
-    <About lang={lang} title="Sobre mí"/>
-    <Experience lang={lang} title="Experiencia"/>
-    <Education lang={lang} title="Educación"/>
-    <Skills  lang={lang} title="Habilidades"/>
+    <Hero  transition:persist lang={lang} id="hero"/>
+    <Contact  lang={lang} title="Contacto" msgEmail = "Enivar correo a" msgPhone = "Llamar a" msgGeneric="Visitar perfil de" id="contact"/>
+    <About lang={lang} title="Sobre mí" id="about"/>
+    <Experience lang={lang} title="Experiencia" id="experience"/>
+    <Projects lang={lang} title="Proyectos" id="projects"/>
+    <Education lang={lang} title="Educación" id="education"/>
+    <Skills  lang={lang} title="Habilidades" id="skills"/>
   </main>
 </Layout>
 

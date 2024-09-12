@@ -170,13 +170,24 @@
     "reference": "Reference…"
   }],
   "projects": [{
-    "name": "Project",
+    "name": "stockmaster",
+    "startDate": "2024-08-01",
+    "endDate": "2024-09-10",
+    "description": "Complete and sophisticated inventory management system based on Django and Metronic, offering a variety of functionalities to optimize business management and improve profitability, including inventory control, turnover alerts, API integration, reporting, billing, users and suppliers, and additional features such as a modern user interface and security measures to protect inventory information and financial operations. It also works as a PWA, it is adaptable to any device.",
+    "highlights": [
+      "Django", "Metronic", "CSS", "Html", "JavaScript", "ORM", "MySQL"
+    ],
+    "image":"/stockmaster.png",
+    "url": "#"
+  },{
+    "name": "Chessboard with Knight's Tour",
     "startDate": "2019-01-01",
     "endDate": "2021-01-01",
-    "description": "Description...",
+    "description": "A interactive chessboard with a knight piece that moves randomly around the board, demonstrating the Knight's Tour problem.",
     "highlights": [
-      "Won award at AIHacks 2016"
+      "Html", "JavaScript", "CSS"
     ],
-    "url": "https://project.com/"
+    "image":"/chessboard.png",
+    "url": "https://github.com/giannco/Chessboard"
   }]
 }

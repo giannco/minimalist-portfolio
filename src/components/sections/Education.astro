@@ -1,10 +1,11 @@
 ---
 interface Props {
     lang: string,
+    id: string,
     title: string;
 }
 
-const { title, lang } = Astro.props;
+const { title, lang, id } = Astro.props;
 
 import { getData } from '@cv';
 import  Section from  '@/components/Section.astro'
@@ -13,7 +14,7 @@ import moment from 'moment';
 const { education } = getData(lang);
 ---
 
-<Section title={title}>
+<Section title={title} id={id}>
 
 	<ul>
 		{
@@ -36,10 +37,14 @@ const { education } = getData(lang);
 					<article>
 						<header>
 							<div>
-								<h3>{institution}</h3>
-								<h4>{studyType}</h3>
-							</div>
-							<time>{years}</time>
+	                            <h3>
+	                               {institution}
+	                            </h3>
+	                            <div class="info" style="">
+	                                <h4>{studyType}</h4>
+	                                <time>{years}</time>
+	                            </div>
+                        	</div>
 						</header>
 					</article>
 				</li>
@@ -76,6 +81,14 @@ const { education } = getData(lang);
 	time {
 		color: #555;
 		gap: 32px;
+		font-size: 14px;
 		/*font-size: 0.85rem;*/
 	}
+	.info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
 </style>

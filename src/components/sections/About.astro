@@ -1,10 +1,11 @@
 ---
 interface Props {
 	lang: string,
+	id: string,
 	title: string;
 }
 
-const { title, lang } = Astro.props;
+const { title, lang, id } = Astro.props;
 
 import { getData } from '@cv';
 import  Section from  '@/components/Section.astro'
@@ -13,7 +14,7 @@ const { basics } = getData(lang);
 const { summary }  = basics
 ---
 
-<Section title={title}>
+<Section title={title} id="about">
 	<p>
 		{summary}
 	</p>

@@ -1,9 +1,10 @@
 ---
 interface Props {
     lang: string,
+    id: string,
     title:  string;
 }
-const { title, lang } = Astro.props;
+const { title, lang, id } = Astro.props;
 
 import HTML from "@/icons/html.astro"
 import Node from "@/icons/node.astro"
@@ -35,7 +36,7 @@ const SKILLS_ICONS: Record<string, any> = {
 }
 ---
 
-<Section title={title}>
+<Section title={title} id={id}>
   <ul>
     {
       skills.map(({ name }) => {
@@ -66,13 +67,13 @@ const SKILLS_ICONS: Record<string, any> = {
 
   li {
     align-items: center;
-    background: #b8daba;
+    background: #eeeeee;
     border-radius: 6px;
     color: black;
     display: flex;
     font-size: 0.9rem;
     font-weight: 500;
     gap: 4px;
-    padding: 0.2rem 0.6rem;
+    padding: 0.6rem;
   }
 <style>
