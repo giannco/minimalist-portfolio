@@ -175,10 +175,10 @@
     "endDate": "2024-09-10",
     "description": "Complete and sophisticated inventory management system based on Django and Metronic, offering a variety of functionalities to optimize business management and improve profitability, including inventory control, turnover alerts, API integration, reporting, billing, users and suppliers, and additional features such as a modern user interface and security measures to protect inventory information and financial operations. It also works as a PWA, it is adaptable to any device.",
     "highlights": [
-      "Django", "Metronic", "CSS", "Html", "JavaScript", "ORM", "MySQL"
+      "Django", "PostgreSQL", "Vercel", "Supabase", "Metronic", "CSS", "Html", "JavaScript", "Django ORM"
     ],
     "image":"/stockmaster.png",
-    "url": "#"
+    "url": "https://djangoproject-indol.vercel.app/"
   },{
     "name": "Chessboard with Knight's Tour",
     "startDate": "2019-01-01",
